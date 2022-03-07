@@ -1,0 +1,14 @@
+<html>
+    <head>
+    <title>Task</title>
+    </head>
+    <body>
+        {{ range . }}
+        Time:{{ .TS }}, Text:{{ .Line }}<br>
+        {{ end }}
+        <form action="/" method="post">
+            New Line:<input type="text" name="text">
+            <input type="submit" value="Send">
+        </form>
+    </body>
+</html>

@@ -9,6 +9,8 @@ services:
       dockerfile: app.Dockerfile
     ports:
       - "80:80"
+    restart: unless-stopped
+
   db:
     container_name: db
     build:

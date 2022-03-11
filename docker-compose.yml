@@ -1,8 +1,18 @@
 version: "3.3"
 services:
-  db:
+  app:
+    container_name: app
+    depends_on:
+      - db
     build:
-      context: ./Docker
+      context: .
+      dockerfile: app.Dockerfile
+    ports:
+      - "80:80"
+  db:
+    container_name: db
+    build:
+      context: .
       dockerfile: db.Dockerfile
     ports:
       - "5432:5432"

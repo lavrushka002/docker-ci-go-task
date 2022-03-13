@@ -1,2 +1,2 @@
 # docker-ci-go-task
-CI Test
+CI DOCKER
